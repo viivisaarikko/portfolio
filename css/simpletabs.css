@@ -1,0 +1,116 @@
+/**
+ * @version    1.3
+ * @package    SimpleTabs
+ * @author    Fotis Evangelou - http://nuevvo.com/labs/simpletabs
+ * @copyright  Copyright (c) 2009-2011 Fotis Evangelou / Nuevvo Webware Ltd. All rights reserved.
+ * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+ 
+:root {
+    --mainColor: #92cfeb;
+    --currentColor: #E8CBC0;
+  }
+
+div.simpleTabs { 
+    padding: 10px 10px 0px 0px; 
+    margin-bottom: 25px;
+}
+ul.simpleTabsNavigation { 
+    padding:0; 
+    margin: 0;
+    text-align:center; 
+}
+ul.simpleTabsNavigation li { 
+    font-size: 1.1em;
+    list-style:none; 
+    display:inline-block; 
+    margin:0; 
+    padding:0; 
+}
+ul.simpleTabsNavigation li a { 
+    background:
+       linear-gradient(
+         to bottom, var(--mainColor) 0%,
+         var(--mainColor) 90%
+
+       );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    transition: .4s all;
+    padding: 7px;
+    margin: 10px 20px 0px 20px;
+    text-transform: uppercase;
+}
+
+ul.simpleTabsNavigation li a:hover { 
+    border-radius: 10px 0px 10px 0px;
+    background-size: 4px 50px;
+    color: rgb(255, 255, 255);
+}
+ul.simpleTabsNavigation li a.current { 
+    background:
+    linear-gradient(
+      to bottom, var(--currentColor) 0%,
+      var(--currentColor) 90%
+
+    );
+ background-position: 0 100%;
+ background-repeat: repeat-x;
+ background-size: 4px 4px;
+ color: rgb(34, 34, 34);
+ text-decoration: none;
+ transition: .4s all;
+ padding: 5px;
+ margin: 10px 20px 0px 20px;
+ text-transform: uppercase;
+}
+div.simpleTabsContent h4 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+div.simpleTabsContent { 
+    padding: 20px 20px 20px 20px; 
+    margin-top:15px; 
+    display:none; 
+    border-radius: 20px;
+    background-color: rgba(226, 217, 217, 0.356);
+}
+div.simpleTabsContent.currentTab { 
+    display:block; 
+}
+
+@media screen and (max-width: 992px) {
+    div.simpleTabs { 
+        padding: 0px 10px 0px 0px; 
+    }
+
+    ul.simpleTabsNavigation li { 
+        font-size: 1.0em;
+        list-style:none; 
+        display:inline-block; 
+        margin-top: 10px; 
+        padding:0; 
+    }
+    ul.simpleTabsNavigation li a { 
+        margin-left: 10px;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    div.simpleTabs { 
+        padding: 0px 10px 0px 0px; 
+    }   
+    ul.simpleTabsNavigation li { 
+        font-size: 1.0em;
+        list-style:none; 
+        display:inline-block; 
+        margin-top: 10px; 
+        padding:0; 
+    }
+    ul.simpleTabsNavigation li a { 
+        margin-left: 10px;
+    }
+}
